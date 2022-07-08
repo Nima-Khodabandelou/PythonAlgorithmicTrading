@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Nima's chart</title>
+  </head>
+  <body>
+    <main id="root">
+      <div id="smaLegend" class="sma-legend"></div>
+      <div id="go-to-realtime-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14" height="14">
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="2"
+            d="M6.5 1.5l5 5.5-5 5.5M3 4l2.5 3L3 10"
+          ></path>
+        </svg>
+      </div>
+      <!-- <div id="go-to-beginning-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="18" height="14">
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="6"
+            d="M6.5 1.5l5 5.5-5 5.5M3 4l2.5 3L3 13"
+          ></path>
+        </svg>
+      </div> -->
+    </main>
+    <div id="togglers">
+      <button id="y-axis">% / p</button>
+      <button id="toggle-volume-bars">volume bars</button>
+      <button id="toggle-sma-1">SMA1</button>
+      <button id="toggle-sma-2">SMA2</button>
+    </div>
+  </body>
+  <script src="./lib/lib.js"></script>
+  <script src="./lib/functions.js"></script>
+  <script src="./data.js"></script>
+  <script src="./bundle.js"></script>
+</html>
