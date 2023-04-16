@@ -35,6 +35,6 @@ with open('ip_report.txt', 'w') as f:
             print(r.content)
             f.write("{0}, {1}".format(datetime.now(),str(r.content)))
             f.write("\n")
-            # time.sleep(5)
+            # time.sleep(3)
             continue
             # break
