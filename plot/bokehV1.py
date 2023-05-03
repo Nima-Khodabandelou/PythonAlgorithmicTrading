@@ -1,5 +1,7 @@
 from bokeh.io import curdoc
+
 from bokeh.plotting import figure, show, curdoc
+
 from bokeh.models import (DatetimeTickFormatter, Span,
                           CustomJS, ColumnDataSource)
 from bokeh.layouts import gridplot
@@ -26,8 +28,7 @@ def VWAP_Show(fig, NoOfData, VWAP_Vecs, VWAP_Periods, NoOfVWAPs):
 
 def showExtrmShapeObj(fig, trendSizes, trendSize, mxIndx, mnIndx, t, cl, ch, tLowerTF, objSize, objVertPosCoeff,
                         objColor, alpha):
-    ''' Shows colored circles above and below each max/min.'''        
-
+    ''' Shows colored circles above and below each max/min.'''
     # alpha is for color contrast
     if (trendSizes[0] == 'Def' and trendSize == '1h') or (trendSizes[0] == '1h' and trendSize == '1d'):
 
@@ -112,6 +113,7 @@ def bokehChartDef(tDef, chDef, clDef, mxIndxDef, mnIndxDef,
     '''This function utilizes bokeh library to plot candlestick chart. '''
     # No. of data
     NoOfData = len(chDef)
+    
     curdoc().theme = 'dark_minimal'
     # TOOLS = "pan,wheel_zoom,box_zoom,reset,save"
     fig = figure(sizing_mode='stretch_both',
