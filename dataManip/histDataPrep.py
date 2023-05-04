@@ -10,6 +10,7 @@ utc = dtm.utcfromtimestamp
 
 
 def dataLoad(dataPath, dataLength, dataSelect):
+
     ''' Loads candlestick data from csv file in a specified date range. '''
 
     with open(dataPath, newline='') as f:
@@ -74,6 +75,7 @@ def dataEdit(data):
 
     NoOfData = len(data)
     unixTime = data[:, 0].copy()
+
     # converting unix time from milisec to sec
     data[:, 0] = [(int(data[i, 0]))/1000 for i in range(0, NoOfData)]
     # t1 = [utc(1617235200), utc(1617235260)]
