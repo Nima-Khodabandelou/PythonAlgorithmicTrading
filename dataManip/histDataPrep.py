@@ -1,8 +1,6 @@
 from asyncio.windows_events import NULL
 import csv
-
 import numpy as np
-
 from datetime import datetime as dtm
 
 
@@ -16,7 +14,6 @@ def dataLoad(dataPath, dataLength, dataSelect):
     with open(dataPath, newline='') as f:
         reader = csv.reader(f)
         data = list(reader)
-
     # converting data from list to  numpy array
     data = np.array(data, dtype='U20')
 
