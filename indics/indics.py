@@ -1,7 +1,5 @@
-
 def calcScalarValOfMA_OfA_Vec(data, Period):
     ''' Calculates exponential/simple moving average'''
-
     MA_Scalar = sum([data[i] for i in range(Period)])/Period
 
     return MA_Scalar
@@ -23,7 +21,6 @@ def computeMA_Vecs(useMA, cc1h, MA_Periods):
                     calcScalarValOfMA_OfA_Vec(
                                     cc1h[i: i - MA_Periods[j]: -1],
                                     MA_Periods[j])
-
                 MA_Vecs[j].append(MA_AtEverydataPoint)
 
     else:

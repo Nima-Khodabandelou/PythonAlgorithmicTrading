@@ -1,8 +1,6 @@
 from asyncio.windows_events import NULL
 import csv
-
 import numpy as np
-
 from datetime import datetime as dtm
 
 
@@ -10,12 +8,12 @@ utc = dtm.utcfromtimestamp
 
 
 def dataLoad(dataPath, dataLength, dataSelect):
+
     ''' Loads candlestick data from csv file in a specified date range. '''
 
     with open(dataPath, newline='') as f:
         reader = csv.reader(f)
         data = list(reader)
-
     # converting data from list to  numpy array
     data = np.array(data, dtype='U20')
 
@@ -74,6 +72,7 @@ def dataEdit(data):
 
     NoOfData = len(data)
     unixTime = data[:, 0].copy()
+
     # converting unix time from milisec to sec
     data[:, 0] = [(int(data[i, 0]))/1000 for i in range(0, NoOfData)]
     # t1 = [utc(1617235200), utc(1617235260)]

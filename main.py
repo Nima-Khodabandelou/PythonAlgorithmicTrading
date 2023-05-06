@@ -1,5 +1,7 @@
 from dataManip.histDataPrep import BullBearMrks, initialDataConfig
+
 import plot.bokehV21h1d as plot
+
 from tech import ma, atr
 
 
@@ -15,6 +17,7 @@ p = [2, 25]
 mas = ma(True, cc, p)
 
 # close_pos_criterion = p > 3*ATR
+
 atr_period = 10
 mult = 2
 
@@ -31,7 +34,9 @@ m2indx = indx - p[1]
 
 lev = 2
 cap_for_each_side_quote = 500
+
 # typically qoute asset is $
+
 base_init_ave_price = (cc[indx] + cl[indx] + ch[indx])/3
 base_cap = cap_for_each_side_quote/base_init_ave_price
 quote_cap = cap_for_each_side_quote
@@ -52,7 +57,9 @@ free_sell_margin = base_cap - base_balance[0]
 buy_loss = [0]*no_active_trades_on_each_side
 sell_loss = [0]*no_active_trades_on_each_side
 total_trades = 0
+
 # opentrade cnd, time, 
+
 trade = {}
 
 if m2[m2indx] > m1[m1indx]:
@@ -151,6 +158,7 @@ base_balance.append(sum(sell_cap) + sell_sum)
 quote_balance.append(sum(buy_cap) + buy_sum)
 
 print('base balance: ', base_balance)
+
 print('quote balance: ', quote_balance)
 
 

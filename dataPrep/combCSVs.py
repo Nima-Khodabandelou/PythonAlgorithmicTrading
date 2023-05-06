@@ -3,11 +3,8 @@ import csv
 
 import sys
 sys.path.append('..')
-
 from all_binance_pairs import binance_pairs
-
 from unused_codes.selected_assets import assets
-
 # col names on the resulting csv files for binance. Note these are not included
 # as headers
 csvfile_col_names = ['Ot',

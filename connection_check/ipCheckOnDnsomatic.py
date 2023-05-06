@@ -1,6 +1,5 @@
 import requests
 from datetime import datetime
-
 from requests.exceptions import (HTTPError, ConnectionError, Timeout,
                                  RequestException)
 
@@ -8,6 +7,7 @@ from requests.exceptions import (HTTPError, ConnectionError, Timeout,
 url = "https://myip.dnsomatic.com/"
 with open('ip_report.txt', 'w') as f:
     while True:
+
         try:
             r = requests.get(url)
             r.raise_for_status()
@@ -33,8 +33,10 @@ with open('ip_report.txt', 'w') as f:
 
         else:
             print(r.content)
-            f.write("{0}, {1}".format(datetime.now(),str(r.content)))
+
+            f.write("{0},
+ {1}".format(datetime.now(),str(r.content)))
             f.write("\n")
-            # time.sleep(5)
+            # time.sleep(3)
             continue
             # break

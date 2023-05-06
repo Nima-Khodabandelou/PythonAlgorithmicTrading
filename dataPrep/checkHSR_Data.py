@@ -2,6 +2,7 @@ import os
 
 
 def chkAssetHSR(asset, base_path, TS, MND):
+    
     HSRFilePath = base_path + asset + '\\cumulative_data\\'
     files = os.listdir(HSRFilePath)
     HSRFileName = asset + '_sr'+TS+'_mnd_'+'0'\

@@ -1,10 +1,16 @@
 # this module checks the consistency of data in different timeframes
 from asyncore import read
+
 import csv
+
 import os
+
 import pandas as pd
+
 import numpy as np
+
 from pandas import *
+
 from pprint import pprint
 
 tf = ['_10m', '_1h', '_1d']
