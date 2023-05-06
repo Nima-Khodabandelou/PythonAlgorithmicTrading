@@ -3,15 +3,15 @@ import plot.bokehV21h1d as plot
 from tech import ma, atr
 
 
-path = "C:\\files\\algotrader\\main\\histData\\"
-asset = 'SANDUSDT'
+path = "C:\\Java_files\\PythonAlgorithmicTrading\\data\\"
+asset = 'SOLUSDT'
 ts = ''
 tf = '1m'
 nod = 5000
 (t, tInc, tDec, cc, ch, cl, ccDec, ccInc, coDec,
  coInc) = BullBearMrks(asset, tf, ts, path, nod)[0:10]
 
-p = [3, 15]
+p = [2, 25]
 mas = ma(True, cc, p)
 
 # close_pos_criterion = p > 3*ATR

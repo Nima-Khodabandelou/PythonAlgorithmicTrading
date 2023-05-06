@@ -90,7 +90,7 @@ def initialDataConfig(asset, Tf, TS, basePath, NoOfData):
     '''This function defines initial parameters and setup of the algorithmic
     trading system.'''
 
-    assetDataFilePath = basePath + asset + '\\cumulative_data\\' + asset\
+    assetDataFilePath = basePath + asset\
         + '_' + Tf + TS + ".csv"
 
     # dataSelect = 0 --> data is selected from the beginning of the file
