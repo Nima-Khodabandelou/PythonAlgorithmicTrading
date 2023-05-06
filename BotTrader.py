@@ -1,29 +1,26 @@
 from dataManip.histDataPrep import BullBearMrks, initialDataConfig
-import plot.bokehV21h1d as plot
-# MA: Moving Average
-from tech import ma as movingAverge
-# ATR: Average True Range
-from tech import atr as averageTruerange
+from tech import ma, atr
 
 
 path = "C:\\Java_files\\PythonAlgorithmicTrading\\data\\"
 asset = 'SOLUSDT'
 ts = ''
-timeFrame = '1m'
-numberOfData = 5000
+# tf: time frame
+tf = '1m'
+# nod: number Of data (rows) extracted from csv file and used for calculation
+nod = 10000
 (t, tInc, tDec, cc, ch, cl, ccDec, ccInc, coDec,
- coInc) = BullBearMrks(asset, timeFrame, ts, path, numberOfData)[0:10]
+ coInc) = BullBearMrks(asset, tf, ts, path, nod)[0:10]
+# ma_p: periods used for calculating moving averages
+ma_p = [100, 150, 500]
+# all_ma: all moving averages calculated for each MA period
+all_ma = ma(True, cc, ma_p)
 
-MA_Periods = [20, 30, 250]
-movingAverageVector = movingAverge(True, cc, MA_Periods)
+atr_p = 10
 
-# close_pos_criterion = p > 3*ATR
-ATR_Period = 10
-ATR_Multiplier = 2
-
-movingAverageForGlobalTrend = movingAverageVector[2]
-movingAverageForLocalMomentum1 = movingAverageVector[0]
-movingAverageForLocalMomentum2 = movingAverageVector[1]
+ma_for_global_trend = all_ma[2]
+ma_for_local_momentum1 = all_ma[0]
+ma_for_local_momentum2 = all_ma[1]
 
 
 
