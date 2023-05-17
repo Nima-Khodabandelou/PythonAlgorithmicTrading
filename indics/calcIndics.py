@@ -1,8 +1,7 @@
 from cmath import sqrt
 from scipy.signal import savgol_filter
 
-
-# #####################################################################
+ #####################################################################
 def calcScalarValOfSTDV_OfA_Vec(data, period):
     ''' Calculates standard deviation of a given series (data) over a given
     period. '''
