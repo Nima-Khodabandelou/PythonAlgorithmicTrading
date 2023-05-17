@@ -11,6 +11,7 @@ with open(data_path, newline='') as f:
 
 c = 0
 
+
 for i in dt:
     # the sixth column is volume
     if i[5] == 0:
