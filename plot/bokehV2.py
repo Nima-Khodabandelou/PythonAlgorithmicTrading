@@ -1,5 +1,6 @@
 from bokeh.io import curdoc
 from bokeh.plotting import figure, show, curdoc
+
 from bokeh.models import (DatetimeTickFormatter, Span,
                           CustomJS, ColumnDataSource)
 from bokeh.layouts import gridplot
