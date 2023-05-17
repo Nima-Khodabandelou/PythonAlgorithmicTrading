@@ -8,7 +8,6 @@ utc = dtm.utcfromtimestamp
 
 
 def dataLoad(dataPath, dataLength, dataSelect):
-
     ''' Loads candlestick data from csv file in a specified date range. '''
 
     with open(dataPath, newline='') as f:
@@ -16,12 +15,10 @@ def dataLoad(dataPath, dataLength, dataSelect):
         data = list(reader)
     # converting data from list to  numpy array
     data = np.array(data, dtype='U20')
-
     if dataLength == 'None':
         dataLength = np.shape(data)[0]
 
     NoOfData = np.shape(data)[0]
-
     if dataSelect == 0:
         return data[0:dataLength]
     else:
