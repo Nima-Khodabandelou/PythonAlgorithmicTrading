@@ -8,7 +8,6 @@ expected_IP = "185.17.113.23" # ENTER YOUR EXPECTED PUBLIC IPv4 ADDRESS HERE
 current_IP = subprocess.check_output(["dig", "+short", "myip.opendns.com @resolver1.opendns.com"])
 
 try:
-
     while True:
         if expected_IP in str(current_IP):
             print("IPs Match - Things are normal")
