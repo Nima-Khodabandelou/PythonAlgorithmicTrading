@@ -54,6 +54,7 @@ def JS_Callback():
     return code
 
 
+
 def showExtrmShapeObj(fig, trendSizes, trendSize, mxIndx, mnIndx, t, cl, ch,
                       tLowerTF, objSize, objVertPosCoeff, objColor, alpha):
     ''' Shows colored circles above and below each max/min.'''
