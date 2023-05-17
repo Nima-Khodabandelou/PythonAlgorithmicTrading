@@ -4,15 +4,18 @@ def initSet():
     TS = '_up_to_2022'
     Tf1h = '1h'
     Tf1d = '1d'
+
     NoOfData1h = 3000
     NoOfData1d = int(3*NoOfData1h/24)
     exch = 'binance'
     plotMode = 1
+
     LRC1d = LRC1h = 2
     MND = 0.01
     PCP1h = 2
     PCP1d = 10
     DeltaT1h = 10
+
     DeltaT1d = 10
     extrmFilterMode = 1
     realTimeMode = 0
