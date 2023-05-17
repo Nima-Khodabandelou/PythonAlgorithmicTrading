@@ -12,7 +12,6 @@ tf = '1m'
 nod = 5000
 (t, tInc, tDec, cc, ch, cl, ccDec, ccInc, coDec,
  coInc) = BullBearMrks(asset, tf, ts, path, nod)[0:10]
-
 p = [2, 25]
 mas = ma(True, cc, p)
 
