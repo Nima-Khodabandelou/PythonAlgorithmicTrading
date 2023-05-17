@@ -6,7 +6,6 @@ from datetime import datetime as dtm
 
 utc = dtm.utcfromtimestamp
 
-
 def dataLoad(dataPath, dataLength, dataSelect):
 
     ''' Loads candlestick data from csv file in a specified date range. '''
@@ -26,6 +25,7 @@ def dataLoad(dataPath, dataLength, dataSelect):
         return data[0:dataLength]
     else:
         return data[NoOfData - dataLength:NoOfData]
+
 
 
 def dataEdit(data):
