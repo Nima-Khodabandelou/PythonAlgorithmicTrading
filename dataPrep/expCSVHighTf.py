@@ -15,7 +15,9 @@ def expHighTfCSV(
 
     # data_select = 0 --> data is selected from the beginning of the file
     dataSelect = 0
+
     NoOfData = 'None'
+
     data = dataLoad(assetDataFilePath, NoOfData, dataSelect)
 
     data, t, unixTime = dataEdit(data)
